@@ -12,3 +12,16 @@ def get_character_count(string):
             dict[letter] += 1
 
     return dict
+
+
+def sort_on(dict):
+    return dict["num"]
+
+
+def sorted_count(dict):
+    result = []
+    for i, v in dict.items():
+        result.append({"char": i, "num": v})
+
+    result.sort(reverse=True, key=sort_on)
+    return result
